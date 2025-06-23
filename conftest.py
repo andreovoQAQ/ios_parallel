@@ -22,9 +22,9 @@ def driver(request):
 
     driver = webdriver.Remote("http://localhost:4723", options=options)
     yield driver
+    bundle_id = driver.capabilities.get("bundleId")  # Retrieve bundleId before quitting
     driver.quit()
     try:
-        bundle_id = driver.capabilities.get("bundleId")
         if bundle_id:
             driver.remove_app(bundle_id)
             print(f"🧼 App ({bundle_id}) removed after test")
