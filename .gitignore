@@ -1,0 +1,55 @@
+# ====================
+# Python 相關
+# ====================
+*.py[cod]
+__pycache__/
+*.so
+
+# 虛擬環境
+.venv/
+venv/
+env/
+
+# pytest
+.pytest_cache/
+.cache/
+*.log
+
+# ====================
+# Appium / 測試產物
+# ====================
+appium_*.log
+logs/
+*.trace
+*.crash
+*.app
+*.apk
+*.ipa
+*.zip  # 若打包測試檔案
+allure-results/
+report/
+screenshots/
+
+# ====================
+# macOS 系統檔
+# ====================
+.DS_Store
+
+# ====================
+# IDE & Editor
+# ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ====================
+# Build & Coverage
+# ====================
+build/
+dist/
+*.egg-info/
+htmlcov/
+coverage.xml
+*.cover
+.tox/
